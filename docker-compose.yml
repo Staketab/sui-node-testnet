@@ -2,15 +2,15 @@
 version: "3.9"
 services:
   sui:
-    image: mysten/sui-node:99b4e7ca83b6d1abe312f5afc04840dce331238b
+    image: mysten/sui-node:testnet
     container_name: sui
+    environment:
+      - RUST_BACKTRACE=1
     ports:
       - "0.0.0.0:9000:9000"
-      - "0.0.0.0:9001:9001"
       - "0.0.0.0:9184:9184"
     expose:
       - "9000"
-      - "9001"
       - "9184"
     restart: always
     #environment:

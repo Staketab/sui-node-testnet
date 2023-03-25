@@ -3,7 +3,7 @@ Setup Sui Testnet node.
 
 ## 1. Install Docker-compose:
 ```
-wget -q -O - https://bit.ly/3OcdIfO | bash -s -- 1.29.2
+wget -q -O - https://bit.ly/3OcdIfO | bash -s -- 2.17.0
 ```
 ## 2. Clone repository:
 
@@ -14,7 +14,7 @@ cd sui-node-testnet
 
 ## 3. Download Genesis:
 ```
-wget -O $HOME/sui-node-testnet/genesis.blob https://github.com/SuiExternal/sui-external/raw/main/genesis.blob
+wget -O $HOME/sui-node-testnet/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
 ```
 ## 4. Start the Node
 Run this command to start the node:  
@@ -29,7 +29,7 @@ cd sui-node-testnet
 docker-compose pull
 docker-compose down --volumes
 rm -r $HOME/sui-node-testnet/suidb $HOME/sui-node-testnet/genesis.blob
-wget -O $HOME/sui-node-testnet/genesis.blob https://github.com/SuiExternal/sui-external/raw/main/genesis.blob
+wget -O $HOME/sui-node-testnet/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
 docker-compose up -d
 docker-compose logs -f sui
 ```

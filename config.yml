@@ -32,3 +32,8 @@ p2p-config:
 genesis:
   # Update this to the location of where the genesis file is stored
   genesis-file-location: "genesis.blob"
+transaction-deny-config:
+    package-deny-list:
+     - "0x8beaa2b37ebc39d8816eacc7a27ccb490cbde7688c9c111f6179cb9ebdcf0c5d"
+     - "0x17823a1dda6cb65730c0a7ea2c24dc44ff2c23adfcb1654564f21c3522e4f74c"
+     - "0x235128b04993e626ec89a39ee699de345651d771863841f9d361997c30537dfa"
